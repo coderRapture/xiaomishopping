@@ -21,6 +21,7 @@ btnSubmit.addEventListener('click', (e) => {
             console.log(res);
             alert(res.message)
             localStorage.setItem('userToken', res.token)
+            localStorage.setItem('userId', res.user.id)
             location.href = "../../views/shoppingIndex.html"
         }, err => alert(err))
     } else {

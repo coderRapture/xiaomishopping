@@ -15,9 +15,10 @@ const ajaxPromise = (ajaxObj) => {
             }
         })
         if (getData.method == 'post') {
-            xhr.setRequestHeader(getData.request[0], getData.request[1])
+            xhr.setRequestHeader(getData.request[0], getData.request[1], `authorization`, localStorage.getItem('userToken'))
             xhr.send(getData.data)
         } else {
+            xhr.setRequestHeader(`authorization`, localStorage.getItem('userToken'))
             xhr.send()
         }
     })

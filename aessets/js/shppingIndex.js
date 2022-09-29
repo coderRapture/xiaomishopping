@@ -9,7 +9,7 @@ const pageLoad = async(data) => {
         data
     })
     const shopList = shop.list
-    console.log(shopList);
+    console.log(shop);
     let str = ''
     shopList.forEach(elem => {
         str += `<div  shop-name="${elem.goods_id}">
